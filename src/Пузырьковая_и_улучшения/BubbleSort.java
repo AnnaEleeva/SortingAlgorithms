@@ -1,3 +1,4 @@
+package Пузырьковая_и_улучшения;//О(n^2) - время. O(1)-память
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -21,7 +22,7 @@ public class BubbleSort {
 
     }
 
-    //идет с конца
+    //идет с конца (справа-налево)
     public static void bubbleSort(int[] array){
         for(int i=0;i<array.length;i++){
             int exchanges=0;
@@ -36,7 +37,8 @@ public class BubbleSort {
             if(exchanges==0) break;
         }
     }
-    //идет с начала
+    //идет с начала (слева-направо)
+    //O(n^2)
     public static void bubbleSort2(int[] array){
         for(int i=0;i<array.length;i++){
             int exchanges=0;
@@ -53,7 +55,7 @@ public class BubbleSort {
     }
 
     public static void printArray(int[]array){
-        for(int e:arrayNumbers){
+        for(int e:array){
             System.out.print(e+" ");
         }
     }
